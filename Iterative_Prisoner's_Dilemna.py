@@ -351,16 +351,6 @@ def get_action(player, history, opponent_history, score, opponent_score, getting
                 return 'b'
 
 
-
-
-
-
-
-
-
-
-
-
     ######
     ######
     #
@@ -377,7 +367,7 @@ def get_action(player, history, opponent_history, score, opponent_score, getting
             size = len(history)
             if(size%5==0): #the number of rounds played is a multiple of 5
                 return 'b'
-            size = len(history)
+            #size = len(history)
             if(size%3==0): #the number of rounds played is a multiple of 3
                 return 'b'
             else:
