@@ -364,7 +364,7 @@ def get_action(player, history, opponent_history, score, opponent_score, getting
     elif player == 9:
         if getting_team_name:
             return 'Profound Samurai'
-         else:
+        else:
             # use history, opponent_history, score, opponent_score
             # to compute your strategy
             if len(opponent_history)==0:
