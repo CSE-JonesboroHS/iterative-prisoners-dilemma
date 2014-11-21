@@ -336,7 +336,7 @@ def get_action(player, history, opponent_history, score, opponent_score, getting
     ######
     ######        
     #
-    elif player == 16:
+    elif player == 8:
         if getting_team_name:
             return 'RBGbitDeadpool'
         else:
@@ -416,7 +416,7 @@ def get_action(player, history, opponent_history, score, opponent_score, getting
     ######
     #
     elif player == 11:
-          if getting_team_name:
+        if getting_team_name:
             return 'Brown Bits 2.0'
         else:
             if len(history)==0: 
