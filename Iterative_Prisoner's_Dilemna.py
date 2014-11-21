@@ -259,15 +259,18 @@ def get_action(player, history, opponent_history, score, opponent_score, getting
     #
     elif player == 5:
         if getting_team_name:
-            return 'Gangsta Fresh Toothpaste'
-        else:
-            if len(opponent_history)==0: #It's the first round: betray
+            return 'Gangsta Fresh Toothpaste w/ Extra Thugneificant'
+         else:
+            if len(opponent_history)==0:
                 return 'b'
-            elif history[-1]=='c' and opponent_history[-1]=='b':
-                return 'b' # betray is they were severely punished last time
             else:
-                if random.random()<0.1: #10% of the other rounds
-                    return 'b'         #betray
+                try:
+                    if opponent_history[-2]=='c' and opponent_history[-1]=='c':
+                        return 'b'
+                    if opponent_history[-2]=='b' and opponent_history[-1]=='b':
+                        return 'b'
+                except IndexError:
+                    'c'
                 else:
                     return 'c'
     
